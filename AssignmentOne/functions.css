@@ -1,0 +1,52 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+#wrapper{
+	width: 960px;
+	margin: 10px auto;
+	/*background-color: blue;*/
+}
+#toggle h1, #slide h1, #fade h1, h1{
+	text-align: center;
+	margin-top: 20px;
+}
+.buttons button, button{
+	margin-top: 10px;
+	color: red;
+	border: none;
+	border-radius: 10px;
+	padding: 5px;
+}
+.buttons, .content{
+	display: inline-block;
+	vertical-align: top;
+}
+.buttons{
+	margin-left: 40px;
+}
+.content{
+	width: 800px;
+	margin-left: 40px;
+	margin-top: 25px;
+	/*background-color: yellow;*/
+}
+.border{
+	border-bottom: solid black;
+	padding-bottom: 20px;
+}
+#slide .buttons{
+	margin-left: 10px;
+}
+.red{
+	color: red;
+}
+.green{
+	color: green;
+}
+.blue{
+	color: blue;
+}
+#class button{
+	margin-left: 50px;
+}
