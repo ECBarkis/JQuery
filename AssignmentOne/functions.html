@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>JQuery Functions</title>
+		<link rel="stylesheet" type="text/css" href="functions.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js">
+		</script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$('#hide').click(function(){
+					$('#toggle .content p').hide();
+				})
+				$('#show').click(function(){
+					$('#toggle .content p').show();
+				})
+				$('#toggle').click(function(){
+					$('#toggle .content p').toggle();
+				})
+				$('#up').click(function(){
+					$('#slide .content p').slideUp();
+				})
+				$('#down').click(function(){
+					$('#slide .content p').slideDown();
+				})
+				$('#stoggle').click(function(){
+					$('#slide .content p').slideToggle();
+				})
+				$('#in').click(function(){
+					$('#fade .content p').fadeIn();
+				})
+				$('#out').click(function(){
+					$('#fade .content p').fadeOut();
+				})
+				$('#ftoggle').click(function(){
+					$('#fade .content p').fadeToggle();
+				})
+				$('#rh').click(function(){
+					$('h1').addClass('red');
+				})
+				$('#gh').click(function(){
+					$('h1').addClass('green');
+				})
+				$('#bh').click(function(){
+					$('h1').addClass('blue');
+				})
+				$('#rp').click(function(){
+					$('p').addClass('red');
+				})
+				$('#gp').click(function(){
+					$('p').addClass('green');
+				})
+				$('#bp').click(function(){
+					$('p').addClass('blue');
+				})
+			})
+		</script>
+	</head>
+	<body>
+		<div id="wrapper">
+			<div id="toggle" class="border">
+				<h1>Hide | Show | Toggle</h1>
+				<div class="buttons">
+					<button id="show">Hide</button><br>
+					<button id="hide">Show</button><br>
+					<button id="toggle">Toggle</button>
+				</div>
+				<div class="content">
+					<p>How does hide, show, and toggle work? While you can see the text now, but if you click the hide button the text will disappear. To have the text reappear just click on the show button. The toggle button will act like the hide or the show button.</p>
+				</div>
+			</div>
+			<div id="slide" class="border">
+				<h1>Slide Up | Slide Down | Slide Toggle</h1>
+				<div class="buttons">
+					<button id="up">Slide Up</button><br>
+					<button id="down">Slide Down</button><br>
+					<button id="stoggle">Slide Toggle</button>
+				</div>
+				<div class="content">
+					<p>How does slide up, slide down, and slide toggle work? If you were thinking that it should work like hide, show, and toggle. You are right. There is a difference in the way the content disappears and reappears.</p>
+				</div>
+			</div>
+			<div id="fade" class="border">
+				<h1>Fade In | Fade Out | Fade Toggle</h1>
+				<div class="buttons">
+					<button id="in">Fade In</button><br>
+					<button id="out">Fade Out</button><br>
+					<button id="ftoggle">Fade Toggle</button>
+				</div>
+				<div class="content">
+					<p>How does fade in, fade out, and fade toggle work? Basically the same as the slide animation. The only difference is that there is a fading animation instead of a sliding animation.</p>
+				</div>
+			</div>
+			<div id="class" class="border">
+				<h1>Add Class</h1>
+				<button id="rh">Red Headlines</button>
+				<button id="gh">Green Headlines</button>
+				<button id="bh">Blue Headlines</button>
+				<button id="rp">Red Paragraphs</button>
+				<button id="gp">Green Paragraphs</button>
+				<button id="bp">Blue Paragraphs</button>
+			</div>
+		</div>
+	</body>
+</html>
