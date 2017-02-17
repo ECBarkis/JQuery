@@ -9,21 +9,16 @@
 	<script type="text/javascript">
 		$(document).ready(function(){
 			$('#formUser').submit(function(){
-				console.log($(this[0]).val());
-				console.log($(this[1]).val());
-				console.log($(this[2]).val());
-				console.log($(this[3]).val());
-				var first = '<td>' + $(this[0]).val() + '</td>';
-				var last = '<td>' + $(this[1]).val() + '</td>';
-				var email = '<td>' + $(this[2]).val() + '</td>';
-				var contact = '<td>' + $(this[3]).val() + '</td>';
+				var data = [];
+				data.push('<tr>');
+				for(var i = 0; i < 4; i++){
+					data.push('<td>' + $(this[i]).val() + '</td>');
+				};
+				data.push('</tr>');
 				$('#usersTable').append(function(){
-					$(this).append('<tr>');
-					$(this).append(first);
-					$(this).append(last);
-					$(this).append(email);
-					$(this).append(contact);
-					$(this).append('</tr>');
+					for(var i = 0; i < data.length; i++){
+						$(this).append(data[i]);
+					};
 				})
 				$('.field').val('');
 				return false;
@@ -58,12 +53,6 @@
 					</tr>
 				</thead>
 				<tbody id="usersTable">
-					<tr>
-						<td>Elliot</td>
-						<td>Barkis</td>
-						<td>barkis@yahoo.com</td>
-						<td>669.300.4655</td>
-					</tr>
 				</tbody>
 			</table>
 		</div>
