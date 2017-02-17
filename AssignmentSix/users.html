@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Users</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js">
+	</script>
+	<link rel="stylesheet" type="text/css" href="users.css">
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('#formUser').submit(function(){
+				console.log($(this[0]).val());
+				console.log($(this[1]).val());
+				console.log($(this[2]).val());
+				console.log($(this[3]).val());
+				var first = '<td>' + $(this[0]).val() + '</td>';
+				var last = '<td>' + $(this[1]).val() + '</td>';
+				var email = '<td>' + $(this[2]).val() + '</td>';
+				var contact = '<td>' + $(this[3]).val() + '</td>';
+				$('#usersTable').append(function(){
+					$(this).append('<tr>');
+					$(this).append(first);
+					$(this).append(last);
+					$(this).append(email);
+					$(this).append(contact);
+					$(this).append('</tr>');
+				})
+				$('.field').val('');
+				return false;
+			});
+			$('.hardSubmit').click(function(){
+				$('#formUser').submit();
+			})
+		})
+	</script>
+</head>
+<body>
+	<div id="wrapper">
+		<div id="form">
+			<h1>Add User</h1>
+			<form id="formUser" method="post">
+				First Name:<input class="field" type="text" name="firstName"><br>
+				Last Name:<input class="field" type="text" name="lastName"><br>
+				Email:<input class="field" type="text" name="email"><br>
+				Contact #:<input class="field" type="text" name="contact"><br>
+				<input type="submit" value="Add User">
+			</form>
+			<button class="hardSubmit">Click me to use .submit() differently!</button>
+		</div>
+		<div id="users">
+			<table>
+				<thead>
+					<tr>
+						<th>First Name</th>
+						<th>Last Name</th>
+						<th>Email</th>
+						<th>Contact #</th>
+					</tr>
+				</thead>
+				<tbody id="usersTable">
+					<tr>
+						<td>Elliot</td>
+						<td>Barkis</td>
+						<td>barkis@yahoo.com</td>
+						<td>669.300.4655</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</body>
+</html>

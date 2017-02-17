@@ -1,0 +1,25 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+#wrapper{
+	width: 970px;
+	margin: 10px auto;
+}
+#users, #form{
+	display: inline-block;
+	vertical-align: top;
+}
+#form{
+	text-align: right;
+}
+form{
+	margin-top: 10px;
+}
+h1{
+	border-bottom: solid grey;
+	text-align: left;
+}
+#users{
+	margin-left: 100px;
+}
