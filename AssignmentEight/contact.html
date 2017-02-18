@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Contact Card</title>
+		<script type="text/javascript" src='http://code.jquery.com/jquery-1.10.2.min.js'></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$(document).on('click', '.button', function(){
+					$('#userForm').submit();
+				})
+				$('#userForm').submit(function(){
+					var first = $(this[0]).val(),
+							last = $(this[1]).val(),
+							description = $(this[2]).val();
+					$('#contact').append(function(){
+						$(this).append("<div class='contact'>");
+						$(this).children().last().append('<h1 class="show">' + first + ' ' + last + '</h1>');
+						$(this).children().last().append('<p class="show">Click to see description</p>');
+						$(this).children().last().append("<p class='hide'>" + description + '</p>');
+						$('.hide').hide();
+					})
+					$('.field').val('');
+					return false;
+				})
+				$(document).on('click', '.contact', function(){
+					$(this).children().toggle();
+				})
+			})
+		</script>
+		<link rel="stylesheet" type="text/css" href="contact.css">
+	</head>
+	<body>
+		<div id="wrapper">
+			<div id="form">
+				<form id="userForm">
+					First Name:<input class="field" type="text" name="firstName"><br>
+					Last Name:<input class="field" type="text" name="lastName"><br>
+					Description:<textarea class="field"></textarea>
+				</form>
+				<button class="button">Add User</button>
+			</div>
+			<div id="contact">
+			</div>
+		</div>
+	</body>
+</html>
